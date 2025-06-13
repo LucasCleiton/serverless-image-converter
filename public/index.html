@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Imagens Serverless</title>
+ <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Conversor de Imagens Serverless</h1>
+        <input type="file" id="fileInput" accept="image/*">
+        <label for="processingType">Tipo de Processamento:</label>
+        <select id="processingType">
+            <option value="resize">Reduzir Resolução (800px)</option>
+            <option value="grayscale">Converter para Preto e Branco</option>
+        </select>
+        <br><br>
+        <button id="uploadButton">Enviar e Processar Imagem</button>
+
+        <div class="loader" id="loader"></div>
+        <div id="statusMessage"></div>
+        
+        <div id="resultContainer" style="display: none;">
+            <p>Seu arquivo foi processado!</p>
+            <a id="resultLink" target="_blank"></a>
+        </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>

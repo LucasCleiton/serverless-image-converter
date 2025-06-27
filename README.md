@@ -16,6 +16,10 @@ A arquitetura é composta por um frontend simples e pelos serviços gerenciados 
 **Fluxo de Dados:**
 `Usuário no Navegador` → `Seleciona Arquivo e Ação` → `Frontend faz Upload para Storage` → `Upload Dispara Cloud Function` → `Cloud Function Processa o Arquivo` → `Cloud Function Salva Resultado no Storage` → `Cloud Function Atualiza Firestore com Link` → `Frontend Escuta Firestore e Exibe Link`.
 
+
+![image](https://github.com/user-attachments/assets/2dd3b59a-4bb3-44f3-a070-94bae5011dc3)
+
+
 ### Componentes:
 
 * **Frontend (HTML, CSS, JS)**: Uma interface web intuitiva que permite ao usuário selecionar um arquivo, escolher o tipo de processamento (redimensionar, P&B, imagem para PDF) e visualizar o link para o resultado.

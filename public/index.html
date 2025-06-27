@@ -4,19 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conversor de Imagens Serverless</title>
- <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Conversor de Imagens Serverless</h1>
-        <input type="file" id="fileInput" accept="image/*">
-        <label for="processingType">Tipo de Processamento:</label>
-        <select id="processingType">
-            <option value="resize">Reduzir Resolução (800px)</option>
-            <option value="grayscale">Converter para Preto e Branco</option>
-        </select>
-        <br><br>
-        <button id="uploadButton">Enviar e Processar Imagem</button>
+        <h1>Conversor de Arquivos Serverless</h1>
+
+        <label for="fileInput" class="input-section">
+            <div class="input-prompt">Clique ou arraste um arquivo (imagem ou PDF) aqui</div>
+            <span id="fileName" class="file-name">Nenhum arquivo selecionado</span>
+            <input type="file" id="fileInput" accept="image/*,application/pdf"> 
+        </label>
+        
+        <div class="processing-options">
+            <h2>Escolha uma ação:</h2>
+            <div class="button-group">
+                <button class="action-button" data-processing-type="resize">
+                    Reduzir Resolução (800px)
+                </button>
+                <button class="action-button" data-processing-type="grayscale">
+                    Converter para Preto e Branco
+                </button>
+                <button class="action-button" data-processing-type="convertToPdf">
+                    Converter Imagem para PDF
+                </button>
+        
+            </div>
+        </div>
 
         <div class="loader" id="loader"></div>
         <div id="statusMessage"></div>
@@ -24,6 +38,7 @@
         <div id="resultContainer" style="display: none;">
             <p>Seu arquivo foi processado!</p>
             <a id="resultLink" target="_blank"></a>
+            <pre id="extractedTextDisplay" style="white-space: pre-wrap; word-wrap: break-word; text-align: left; margin-top: 15px; background-color: #f8f8f8; padding: 10px; border-radius: 5px; border: 1px solid #eee; display: none;"></pre>
         </div>
     </div>
 

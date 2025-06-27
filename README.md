@@ -26,6 +26,10 @@ A arquitetura é composta por um frontend simples e pelos serviços gerenciados 
 * **Firebase Storage**: Serviço de armazenamento de objetos altamente escalável, usado para guardar os arquivos originais (na pasta `uploads/`) e os arquivos processados (na pasta `processed/`). O upload inicial do frontend aciona o fluxo serverless.
 * **Firebase Functions**: A função `processImage` é o coração serverless da aplicação. Ela é acionada por eventos de upload no Storage, executa a lógica de processamento do arquivo e coordena o salvamento do resultado.
 * **Cloud Firestore**: Banco de dados NoSQL flexível, usado para armazenar metadados sobre os arquivos processados. O frontend "escuta" o Firestore em tempo real para exibir o link de download do arquivo convertido assim que ele está pronto.
+---
+### Imagem do projeto:
+![image](https://github.com/user-attachments/assets/850d6ac6-d412-40fa-864f-2eca49c91e04)
+
 
 ---
 
